@@ -1,3 +1,6 @@
+include: "/explores/*.lkml"
+include: "/views/*.view.lkml"
+
 # Define the database connection to be used for this model.
 connection: "bigquery_mlanciau"
 
@@ -10,4 +13,3 @@ datagroup: lookml_model_mlanciau_default_datagroup {
 }
 
 persist_with: lookml_model_mlanciau_default_datagroup
-
