@@ -32,6 +32,7 @@ view: transactions {
   }
   dimension: hash {
     type: string
+    primary_key: yes
     description: "The hash of this transaction"
     sql: ${TABLE}.`hash` ;;
   }
@@ -101,6 +102,7 @@ view: transactions__inputs {
   }
   dimension: index {
     type: number
+    primary_key: yes
     description: "0-indexed number of an input within a transaction"
     sql: ${TABLE}.index ;;
   }
@@ -160,6 +162,7 @@ view: transactions__outputs {
   }
   dimension: index {
     type: number
+    primary_key: yes
     description: "0-indexed number of an output within a transaction used by a later transaction to refer to that specific output"
     sql: ${TABLE}.index ;;
   }
@@ -200,6 +203,7 @@ view: transactions__inputs__addresses {
 
   dimension: transactions__inputs__addresses {
     type: string
+    primary_key: yes
     description: "Addresses which own the spent output"
     sql: transactions__inputs__addresses ;;
   }
@@ -209,6 +213,7 @@ view: transactions__outputs__addresses {
 
   dimension: transactions__outputs__addresses {
     type: string
+    primary_key: yes
     description: "Addresses which own this output"
     sql: transactions__outputs__addresses ;;
   }
